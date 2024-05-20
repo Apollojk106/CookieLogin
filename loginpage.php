@@ -23,7 +23,7 @@
         
             <form style="background-color: white;" action="login.php" method="POST">
                 <?php
-                    if ($_COOKIE['status'] == "Logado") {                       
+                    if (isset($_COOKIE['status']) && $_COOKIE['status'] == "Logado") {                       
                         header("Location: conteudo.php");
                         exit();
                     }
